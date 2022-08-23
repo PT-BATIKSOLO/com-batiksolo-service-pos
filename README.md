@@ -1,1 +1,1 @@
-# com-bru-service-pos
+# com-batiksolo-service-pos
