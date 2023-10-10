@@ -1,4 +1,5 @@
-﻿using Com.BatikSolo.Service.Pos.Lib.Models.SalesDoc;
+﻿using Com.Bateeq.Service.Pos.Lib.ViewModels.SalesDoc;
+using Com.BatikSolo.Service.Pos.Lib.Models.SalesDoc;
 using Com.BatikSolo.Service.Pos.Lib.ViewModels;
 using Com.BatikSolo.Service.Pos.Lib.ViewModels.SalesDoc;
 using System;
@@ -27,5 +28,7 @@ namespace Com.BatikSolo.Service.Pos.Lib.Services.SalesDocService
         List<SalesDoc> OmzetReport(string storecode, DateTimeOffset dateFrom, DateTimeOffset dateTo, string shift);
         MemoryStream GenerateExcelOmzet(string storecode, DateTimeOffset dateFrom, DateTimeOffset dateTo, string shift);
         List<SalesDocByRoViewModel> GetByRO(string articleRealizationOrder);
+        Tuple<List<SalesReportViewModel>, int> GetSalesAll(string storageId, DateTime dateFrom, DateTime dateTo, int page = 1, int size = 25);
+        MemoryStream GenerateExcelReportSalesAll(string storageId, DateTime dateFrom, DateTime dateTo);
     }
 }
